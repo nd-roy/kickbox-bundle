@@ -1,0 +1,18 @@
+{
+    "name": "andi/kickbox-bundle",
+    "description": "Free Email Verification for Symfony: http://kickbox.io",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdoul Ndiaye",
+            "email": "abdoul.nd@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Andi\\KickBoxBundle\\": ""
+        }
+    }
+}
