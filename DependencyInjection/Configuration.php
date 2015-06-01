@@ -28,17 +28,23 @@ class Configuration implements ConfigurationInterface
                 ->useAttributeAsKey('name')
                 ->requiresAtLeastOneElement()
                 ->isRequired()
-                ->info('Your API key list.')
-                ->prototype('array')
-                    ->children()
-                        ->scalarNode('key')
-                            ->isRequired()
-                            ->cannotBeEmpty()
-                            ->info('The api token generated in kickbox.io.')
+                ->info('API key list.')
+                    ->prototype('array')
+                        ->children()
+                            ->scalarNode('token')
+                                ->isRequired()
+                                ->cannotBeEmpty()
+                                ->info('The api token generated in kickbox.io.')
+                            ->end()
                         ->end()
                     ->end()
+                ->end()
+                ->scalarNode('default_key')
+                    ->info('The default key.')
+                ->end()
             ->end()
         ;
+
         return $treeBuilder;
     }
 }
