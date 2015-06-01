@@ -8,7 +8,9 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 /**
  * This is the class that validates and merges configuration from your app/config files
  *
- * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html#cookbook-bundles-extension-config-class}
+ * To learn more see {
+ *   @link http://symfony.com/doc/current/cookbook/bundles/extension.html#cookbook-bundles-extension-config-class
+ * }
  */
 class Configuration implements ConfigurationInterface
 {
@@ -20,10 +22,23 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('andi_kick_box');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
-
+        $rootNode
+            ->children()
+                ->arrayNode('api_keys')
+                ->useAttributeAsKey('name')
+                ->requiresAtLeastOneElement()
+                ->isRequired()
+                ->info('Your API key list.')
+                ->prototype('array')
+                    ->children()
+                        ->scalarNode('key')
+                            ->isRequired()
+                            ->cannotBeEmpty()
+                            ->info('The api token generated in kickbox.io.')
+                        ->end()
+                    ->end()
+            ->end()
+        ;
         return $treeBuilder;
     }
 }
