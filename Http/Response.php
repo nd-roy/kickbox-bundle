@@ -115,4 +115,284 @@ class Response
      * @var boolean
      */
     protected $success;
+
+    /**
+     * Get Balance.
+     *
+     * @return float
+     */
+    public function getBalance()
+    {
+        return $this->balance;
+    }
+
+    /**
+     * Set Balance.
+     *
+     * @param float $balance
+     */
+    public function setBalance($balance)
+    {
+        $this->balance = $balance;
+    }
+
+    /**
+     * Get ResponseTime.
+     *
+     * @return int
+     */
+    public function getResponseTime()
+    {
+        return $this->responseTime;
+    }
+
+    /**
+     * Set ResponseTime.
+     *
+     * @param int $responseTime
+     */
+    public function setResponseTime($responseTime)
+    {
+        $this->responseTime = $responseTime;
+    }
+
+    /**
+     * Get Result.
+     *
+     * @return string
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
+
+    /**
+     * Set Result.
+     *
+     * @param string $result
+     */
+    public function setResult($result)
+    {
+        $this->result = $result;
+    }
+
+    /**
+     * Get Reason.
+     *
+     * @return string
+     */
+    public function getReason()
+    {
+        return $this->reason;
+    }
+
+    /**
+     * Set Reason.
+     *
+     * @param string $reason
+     */
+    public function setReason($reason)
+    {
+        $this->reason = $reason;
+    }
+
+    /**
+     * Is Role.
+     *
+     * @return boolean
+     */
+    public function isRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * Set Role.
+     *
+     * @param boolean $role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+    }
+
+    /**
+     * Is Free.
+     *
+     * @return boolean
+     */
+    public function isFree()
+    {
+        return $this->free;
+    }
+
+    /**
+     * Set Free.
+     *
+     * @param boolean $free
+     */
+    public function setFree($free)
+    {
+        $this->free = $free;
+    }
+
+    /**
+     * Is Disposable.
+     *
+     * @return boolean
+     */
+    public function isDisposable()
+    {
+        return $this->disposable;
+    }
+
+    /**
+     * Set Disposable.
+     *
+     * @param boolean $disposable
+     */
+    public function setDisposable($disposable)
+    {
+        $this->disposable = $disposable;
+    }
+
+    /**
+     * Is AcceptAll.
+     *
+     * @return boolean
+     */
+    public function isAcceptAll()
+    {
+        return $this->acceptAll;
+    }
+
+    /**
+     * Set AcceptAll.
+     *
+     * @param boolean $acceptAll
+     */
+    public function setAcceptAll($acceptAll)
+    {
+        $this->acceptAll = $acceptAll;
+    }
+
+    /**
+     * Get Suggestion.
+     *
+     * @return null|string
+     */
+    public function getSuggestion()
+    {
+        return $this->suggestion;
+    }
+
+    /**
+     * Set Suggestion.
+     *
+     * @param null|string $suggestion
+     */
+    public function setSuggestion($suggestion)
+    {
+        $this->suggestion = $suggestion;
+    }
+
+    /**
+     * Get Sendex.
+     *
+     * @return float
+     */
+    public function getSendex()
+    {
+        return $this->sendex;
+    }
+
+    /**
+     * Set Sendex.
+     *
+     * @param float $sendex
+     */
+    public function setSendex($sendex)
+    {
+        $this->sendex = $sendex;
+    }
+
+    /**
+     * Get Email.
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set Email.
+     *
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * Get User.
+     *
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set User.
+     *
+     * @param string $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get Domain.
+     *
+     * @return string
+     */
+    public function getDomain()
+    {
+        return $this->domain;
+    }
+
+    /**
+     * Set Domain.
+     *
+     * @param string $domain
+     */
+    public function setDomain($domain)
+    {
+        $this->domain = $domain;
+    }
+
+    /**
+     * Is Success.
+     *
+     * @return boolean
+     */
+    public function isSuccess()
+    {
+        return $this->success;
+    }
+
+    /**
+     * Set Success.
+     *
+     * @param boolean $success
+     */
+    public function setSuccess($success)
+    {
+        $this->success = $success;
+    }
 }
