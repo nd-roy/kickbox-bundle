@@ -117,7 +117,7 @@ class Response
     protected $success;
 
     /**
-     * Get Balance.
+     * get Balance.
      *
      * @return float
      */
@@ -130,14 +130,18 @@ class Response
      * Set Balance.
      *
      * @param float $balance
+     *
+     * @return $this
      */
     public function setBalance($balance)
     {
         $this->balance = $balance;
+
+        return $this;
     }
 
     /**
-     * Get ResponseTime.
+     * get ResponseTime.
      *
      * @return int
      */
@@ -150,14 +154,18 @@ class Response
      * Set ResponseTime.
      *
      * @param int $responseTime
+     *
+     * @return $this
      */
     public function setResponseTime($responseTime)
     {
         $this->responseTime = $responseTime;
+
+        return $this;
     }
 
     /**
-     * Get Result.
+     * get Result.
      *
      * @return string
      */
@@ -170,14 +178,18 @@ class Response
      * Set Result.
      *
      * @param string $result
+     *
+     * @return $this
      */
     public function setResult($result)
     {
         $this->result = $result;
+
+        return $this;
     }
 
     /**
-     * Get Reason.
+     * get Reason.
      *
      * @return string
      */
@@ -190,14 +202,18 @@ class Response
      * Set Reason.
      *
      * @param string $reason
+     *
+     * @return $this
      */
     public function setReason($reason)
     {
         $this->reason = $reason;
+
+        return $this;
     }
 
     /**
-     * Is Role.
+     * is Role.
      *
      * @return boolean
      */
@@ -210,14 +226,18 @@ class Response
      * Set Role.
      *
      * @param boolean $role
+     *
+     * @return $this
      */
     public function setRole($role)
     {
         $this->role = $role;
+
+        return $this;
     }
 
     /**
-     * Is Free.
+     * is Free.
      *
      * @return boolean
      */
@@ -230,14 +250,18 @@ class Response
      * Set Free.
      *
      * @param boolean $free
+     *
+     * @return $this
      */
     public function setFree($free)
     {
         $this->free = $free;
+
+        return $this;
     }
 
     /**
-     * Is Disposable.
+     * is Disposable.
      *
      * @return boolean
      */
@@ -250,14 +274,18 @@ class Response
      * Set Disposable.
      *
      * @param boolean $disposable
+     *
+     * @return $this
      */
     public function setDisposable($disposable)
     {
         $this->disposable = $disposable;
+
+        return $this;
     }
 
     /**
-     * Is AcceptAll.
+     * is AcceptAll.
      *
      * @return boolean
      */
@@ -270,14 +298,18 @@ class Response
      * Set AcceptAll.
      *
      * @param boolean $acceptAll
+     *
+     * @return $this
      */
     public function setAcceptAll($acceptAll)
     {
         $this->acceptAll = $acceptAll;
+
+        return $this;
     }
 
     /**
-     * Get Suggestion.
+     * get Suggestion.
      *
      * @return null|string
      */
@@ -290,14 +322,18 @@ class Response
      * Set Suggestion.
      *
      * @param null|string $suggestion
+     *
+     * @return $this
      */
     public function setSuggestion($suggestion)
     {
         $this->suggestion = $suggestion;
+
+        return $this;
     }
 
     /**
-     * Get Sendex.
+     * get Sendex.
      *
      * @return float
      */
@@ -310,14 +346,18 @@ class Response
      * Set Sendex.
      *
      * @param float $sendex
+     *
+     * @return $this
      */
     public function setSendex($sendex)
     {
         $this->sendex = $sendex;
+
+        return $this;
     }
 
     /**
-     * Get Email.
+     * get Email.
      *
      * @return string
      */
@@ -330,14 +370,18 @@ class Response
      * Set Email.
      *
      * @param string $email
+     *
+     * @return $this
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
     }
 
     /**
-     * Get User.
+     * get User.
      *
      * @return string
      */
@@ -350,14 +394,18 @@ class Response
      * Set User.
      *
      * @param string $user
+     *
+     * @return $this
      */
     public function setUser($user)
     {
         $this->user = $user;
+
+        return $this;
     }
 
     /**
-     * Get Domain.
+     * get Domain.
      *
      * @return string
      */
@@ -370,14 +418,18 @@ class Response
      * Set Domain.
      *
      * @param string $domain
+     *
+     * @return $this
      */
     public function setDomain($domain)
     {
         $this->domain = $domain;
+
+        return $this;
     }
 
     /**
-     * Is Success.
+     * is Success.
      *
      * @return boolean
      */
@@ -390,9 +442,13 @@ class Response
      * Set Success.
      *
      * @param boolean $success
+     *
+     * @return $this
      */
     public function setSuccess($success)
     {
         $this->success = $success;
+
+        return $this;
     }
 }

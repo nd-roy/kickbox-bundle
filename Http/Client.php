@@ -11,6 +11,7 @@
 
 namespace Andi\KickBoxBundle\Http;
 
+use Andi\KickBoxBundle\Factory\ResponseFactory;
 use GuzzleHttp\Client as HttpClient;
 
 /**
@@ -28,7 +29,7 @@ class Client
     /**
      * @var string
      */
-    protected $token;
+    protected $key;
 
     /**
      * @var Client
@@ -44,21 +45,41 @@ class Client
     public function __construct($endPoint, $key)
     {
         $this->endPoint = $endPoint;
-        $this->token    = $key;
+        $this->key      = $key;
         $this->client   = new HttpClient();
     }
 
     /**
      * Call the Api to validate one specific email address.
      *
-     * @param string $email The email address to be verified
-     *
-     * @param int $timeout  Maximum time, in milliseconds, for the API to complete a verification request.
+     * @param string $email    The email address to be verified
+     * @param int    $timeout  Maximum time, in milliseconds, for the API to complete a verification request.
      *
      * @return Response     A Kickbox response instance.
      */
     public function verify($email, $timeout = 6000)
     {
+        $httpResponse = $this->client->get($this->endPoint, $this->getQueryParameters($email, $timeout));
 
+        return ResponseFactory::createResponse($httpResponse->getHeaders(), $httpResponse->json());
+    }
+
+    /**
+     * Return the query parameters for a kickbox api call.
+     *
+     * @param string $email    The email address.
+     * @param int    $timeout  Time in milliseconds.
+     *
+     * @return array The query parameters.
+     */
+    protected function getQueryParameters($email, $timeout = 6000)
+    {
+        return array(
+            'query' => array(
+                'email'   => $email,
+                'apikey'  => $this->key,
+                'timeout' => $timeout,
+            )
+        );
     }
 }
