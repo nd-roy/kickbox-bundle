@@ -13,6 +13,8 @@ namespace Andi\KickBoxBundle\Http;
 
 /**
  * The response content of a Kickbox Request.
+ *
+ * @author Abdoul Ndiaye <abdoul.nd@gmail.com>
  */
 class Response
 {

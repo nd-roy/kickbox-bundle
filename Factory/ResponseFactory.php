@@ -13,6 +13,11 @@ namespace Andi\KickBoxBundle\Factory;
 
 use Andi\KickBoxBundle\Http\Response;
 
+/**
+ * Kickbox Response Factory.
+ *
+ * @author Abdoul Ndiaye <abdoul.nd@gmail.com>
+ */
 class ResponseFactory
 {
     /**
