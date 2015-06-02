@@ -18,7 +18,7 @@ class ResponseFactory
     /**
      * Create a KickBox Response according to an api call.
      *
-     * @param array $headers    HTTP headers of the call.
+     * @param array $headers    HTTP Headers of the call.
      * @param array $parameters Json Parameters of the call.
      *
      * @return Response A Kickbox response instance.

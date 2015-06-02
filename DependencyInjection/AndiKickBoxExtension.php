@@ -45,7 +45,7 @@ class AndiKickBoxExtension extends Extension
      * Process and create the kickbox client services.
      *
      * @param ContainerBuilder $container A ContainerBuilder instance
-     * @param array $config               The configuration of the kickbox bundle.
+     * @param array            $config    The configuration of the kickbox bundle.
      */
     protected function processClientDefinitions(ContainerBuilder $container, array $config)
     {
@@ -66,7 +66,7 @@ class AndiKickBoxExtension extends Extension
      * Create an alias for the default service definition.
      *
      * @param ContainerBuilder $container A ContainerBuilder instance
-     * @param array $config               The configuration of the kickbox bundle.
+     * @param array            $config    The configuration of the kickbox bundle.
      */
     protected function createDefaultClientAlias(ContainerBuilder $container, array $config)
     {
@@ -86,7 +86,8 @@ class AndiKickBoxExtension extends Extension
     /**
      * Returns the name of a client service according to a given name.
      *
-     * @param  string $name
+     * @param  string $name The service name
+     *
      * @return string
      */
     protected function getClientServiceName($name)
