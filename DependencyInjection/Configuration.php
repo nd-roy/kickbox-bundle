@@ -23,6 +23,8 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
+    const DEFAULT_ENDPOINT = 'https://api.kickbox.io/v2/verify';
+
     /**
      * {@inheritdoc}
      */
@@ -50,6 +52,12 @@ class Configuration implements ConfigurationInterface
                 ->end()
                 ->scalarNode('default_key')
                     ->info('The default key.')
+                ->end()
+                ->scalarNode('endpoint')
+                    ->info('The endpoint of the kickbox API.')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                    ->defaultValue(self::DEFAULT_ENDPOINT)
                 ->end()
             ->end()
         ;
