@@ -5,6 +5,10 @@
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/404da883-9217-4c9f-8e5d-3f4c10c50255/big.png)](https://insight.sensiolabs.com/projects/404da883-9217-4c9f-8e5d-3f4c10c50255)
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/?branch=master)
+[![Build Status](https://travis-ci.org/AbdoulNdiaye/kickbox-bundle.svg?branch=master)](https://travis-ci.org/AbdoulNdiaye/kickbox-bundle)
+
 # Email Verification Library for Symfony
 
 Kickbox determines if an email address is not only valid, but associated with a actual user. Uses include:
