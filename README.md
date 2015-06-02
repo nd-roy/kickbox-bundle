@@ -3,6 +3,8 @@
   <br>
 </p>
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/404da883-9217-4c9f-8e5d-3f4c10c50255/big.png)](https://insight.sensiolabs.com/projects/404da883-9217-4c9f-8e5d-3f4c10c50255)
+
 # Email Verification Library for Symfony
 
 Kickbox determines if an email address is not only valid, but associated with a actual user. Uses include:
