@@ -3,6 +3,8 @@
     "description": "Free Email Verification for Symfony: http://kickbox.io",
     "type": "symfony-bundle",
     "license": "MIT",
+    "homepage": "https://github.com/AbdoulNdiaye/kickbox-bundle",
+    "keywords": ["kickbox", "api"],
     "authors": [
         {
             "name": "Abdoul Ndiaye",
