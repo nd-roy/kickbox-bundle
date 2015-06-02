@@ -50,11 +50,11 @@ andi_kick_box:
         # Prototype
         name:
 
-            # The api token generated in kickbox.io.
-            token:                ~ # Required
+            # The api key generated in kickbox.io.
+            key:                  ~ # Required
 
-    # The default key.
-    default_key:          ~
+    # The default API name.
+    default_api_name:     ~
 
     # The endpoint of the kickbox API.
     endpoint:             'https://api.kickbox.io/v2/verify'
