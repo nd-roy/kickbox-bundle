@@ -57,7 +57,7 @@ andi_kick_box:
     default_key:          ~
 
     # The endpoint of the kickbox API.
-    endpoint:             'https://api.kickbox.io/v2/verify' # Required
+    endpoint:             'https://api.kickbox.io/v2/verify'
 ```
 
 

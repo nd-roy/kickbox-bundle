@@ -4,6 +4,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
+    <parameters>
+        <parameter key="kickbox.http.client.class">Andi\KickBoxBundle\Http\Client</parameter>
+    </parameters>
+
     <!--
     <services>
         <service id="andi_kick_box.example" class="Andi\KickBoxBundle\Example">

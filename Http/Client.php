@@ -26,6 +26,11 @@ class Client
     protected $endPoint;
 
     /**
+     * @var string
+     */
+    protected $token;
+
+    /**
      * @var Client
      */
     protected $client;
@@ -34,12 +39,12 @@ class Client
      * Construct.
      *
      * @param string $endPoint A KickBox API endpoint.
-     * @param string $token    An Api token generated in kickbox.io.
+     * @param string $key      An Api key generated in kickbox.io.
      */
-    public function __construct($endPoint, $token)
+    public function __construct($endPoint, $key)
     {
         $this->endPoint = $endPoint;
-        $this->token    = $token;
+        $this->token    = $key;
         $this->client   = new HttpClient();
     }
 
