@@ -6,15 +6,10 @@
 
     <parameters>
         <parameter key="kickbox.http.client.class">Andi\KickBoxBundle\Http\Client</parameter>
+        <parameter key="kickbox.http.response.factory.class">Andi\KickBoxBundle\Factory\ResponseFactory</parameter>
     </parameters>
 
-    <!--
     <services>
-        <service id="andi_kick_box.example" class="Andi\KickBoxBundle\Example">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
-        </service>
+        <service id="kickbox.http.response.factory" class="%kickbox.http.response.factory.class%" />
     </services>
-    -->
 </container>

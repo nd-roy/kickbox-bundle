@@ -39,16 +39,23 @@ class Client
     protected $client;
 
     /**
+     * @var ResponseFactory
+     */
+    protected $responseFactory;
+
+    /**
      * Construct.
      *
-     * @param string $endPoint A KickBox API endpoint.
-     * @param string $key      An Api key generated in kickbox.io.
+     * @param ResponseFactory $responseFactory A Response Factory instance.
+     * @param string          $endPoint        A KickBox API endpoint.
+     * @param string          $key             An Api key generated in kickbox.io.
      */
-    public function __construct($endPoint, $key)
+    public function __construct(ResponseFactory $responseFactory, $endPoint, $key)
     {
-        $this->endPoint = $endPoint;
-        $this->key      = $key;
-        $this->client   = new HttpClient();
+        $this->responseFactory = $responseFactory;
+        $this->endPoint        = $endPoint;
+        $this->key             = $key;
+        $this->client          = new HttpClient();
     }
 
     /**
@@ -74,7 +81,7 @@ class Client
             );
         }
 
-        return ResponseFactory::createResponse($httpResponse->getHeaders(), $httpResponse->json());
+        return $this->responseFactory->createResponse($httpResponse->getHeaders(), $httpResponse->json());
     }
 
     /**

@@ -14,6 +14,7 @@ namespace Andi\KickBoxBundle\DependencyInjection;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Definition;
+use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
@@ -55,6 +56,7 @@ class AndiKickBoxExtension extends Extension
 
         foreach ($apiKeys as $name => $node) {
             $clientDefinition = new Definition($clientClass);
+            $clientDefinition->addArgument(new Reference('kickbox.http.response.factory'));
             $clientDefinition->addArgument($endPoint);
             $clientDefinition->addArgument($node['key']);
 

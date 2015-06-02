@@ -23,13 +23,14 @@ class ResponseFactory
      *
      * @return Response A Kickbox response instance.
      */
-    public static function createResponse(array $headers, array $parameters)
+    public function createResponse(array $headers, array $parameters)
     {
         $response = new Response();
 
         $response
             ->setBalance($headers['X-Kickbox-Balance'][0])
-            ->setResponseTime($headers['X-Kickbox-Response-Time'][0]);
+            ->setResponseTime($headers['X-Kickbox-Response-Time'][0])
+        ;
 
         $response
             ->setResult($parameters['result'])
