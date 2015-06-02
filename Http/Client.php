@@ -11,8 +11,10 @@
 
 namespace Andi\KickBoxBundle\Http;
 
+use Andi\KickBoxBundle\Exception\KickBoxApiException;
 use Andi\KickBoxBundle\Factory\ResponseFactory;
 use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Exception\RequestException;
 
 /**
  * The Kickbox http client that verify email addresses.
@@ -59,7 +61,18 @@ class Client
      */
     public function verify($email, $timeout = 6000)
     {
-        $httpResponse = $this->client->get($this->endPoint, $this->getQueryParameters($email, $timeout));
+        try {
+            $httpResponse = $this->client->get($this->endPoint, $this->getQueryParameters($email, $timeout));
+        } catch (RequestException $exception) {
+            $errorContent = $exception->getResponse()->json();
+
+            throw new KickBoxApiException(
+                $errorContent['message'],
+                $exception->getRequest(),
+                $exception->getResponse(),
+                $exception
+            );
+        }
 
         return ResponseFactory::createResponse($httpResponse->getHeaders(), $httpResponse->json());
     }

@@ -76,8 +76,10 @@ class AndiKickBoxExtension extends Extension
         if (null !== $defaultName && array_key_exists($defaultName, $apiKeys)) {
             $defaultClientReference = $defaultName;
         } else {
-            $defaultClientReference = array_keys($apiKeys)[0];
+            $names = array_keys($apiKeys);
+            $defaultClientReference = $names[0];
         }
+
         $container->setAlias(static::DEFAULT_CLIENT_SERVICE_NAME, $this->getClientServiceName($defaultClientReference));
     }
 
