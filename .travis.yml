@@ -9,11 +9,6 @@ php:
   - hhvm
   - hhvm-nightly
 
-branches:
-  only:
-    - master
-    - /^\d+\.\d+$/
-
 matrix:
   fast_finish: true
   include:
