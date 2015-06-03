@@ -56,6 +56,7 @@ class AndiKickBoxExtension extends Extension
 
         foreach ($apiKeys as $name => $node) {
             $clientDefinition = new Definition($clientClass);
+            $clientDefinition->addArgument(new Reference('kickbox.guzzle.client'));
             $clientDefinition->addArgument(new Reference('kickbox.http.response.factory'));
             $clientDefinition->addArgument($endPoint);
             $clientDefinition->addArgument($node['key']);

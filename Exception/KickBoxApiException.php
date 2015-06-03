@@ -17,6 +17,8 @@ use GuzzleHttp\Message\ResponseInterface;
 
 /**
  * Exception thrown if a kickbox api call has not a 2xx http status code.
+ *
+ * @author Abdoul Ndiaye <abdoul.nd@gmail.com>
  */
 class KickBoxApiException extends BadResponseException
 {

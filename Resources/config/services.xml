@@ -5,11 +5,13 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
+        <parameter key="kickbox.guzzle.client.class">GuzzleHttp\Client</parameter>
         <parameter key="kickbox.http.client.class">Andi\KickBoxBundle\Http\Client</parameter>
         <parameter key="kickbox.http.response.factory.class">Andi\KickBoxBundle\Factory\ResponseFactory</parameter>
     </parameters>
 
     <services>
+        <service id="kickbox.guzzle.client"         class="%kickbox.guzzle.client.class%" />
         <service id="kickbox.http.response.factory" class="%kickbox.http.response.factory.class%" />
     </services>
 </container>

@@ -15,6 +15,7 @@ use Andi\KickBoxBundle\Exception\KickBoxApiException;
 use Andi\KickBoxBundle\Factory\ResponseFactory;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Message\ResponseInterface;
 
 /**
  * The Kickbox http client that verify email addresses.
@@ -23,6 +24,16 @@ use GuzzleHttp\Exception\RequestException;
  */
 class Client
 {
+    /**
+     * @var HttpClient
+     */
+    protected $client;
+
+    /**
+     * @var ResponseFactory
+     */
+    protected $responseFactory;
+
     /**
      * @var string
      */
@@ -34,28 +45,19 @@ class Client
     protected $key;
 
     /**
-     * @var Client
-     */
-    protected $client;
-
-    /**
-     * @var ResponseFactory
-     */
-    protected $responseFactory;
-
-    /**
      * Construct.
      *
+     * @param HttpClient      $client          A Guzzle client instance.
      * @param ResponseFactory $responseFactory A Response Factory instance.
      * @param string          $endPoint        A KickBox API endpoint.
      * @param string          $key             An Api key generated in kickbox.io.
      */
-    public function __construct(ResponseFactory $responseFactory, $endPoint, $key)
+    public function __construct(HttpClient $client, ResponseFactory $responseFactory, $endPoint, $key)
     {
+        $this->client          = $client;
         $this->responseFactory = $responseFactory;
         $this->endPoint        = $endPoint;
         $this->key             = $key;
-        $this->client          = new HttpClient();
     }
 
     /**
@@ -71,7 +73,9 @@ class Client
         try {
             $httpResponse = $this->client->get($this->endPoint, $this->getQueryParameters($email, $timeout));
         } catch (RequestException $exception) {
-            $errorContent = $exception->getResponse()->json();
+            /* @var ResponseInterface $exceptionResponse */
+            $exceptionResponse = $exception->getResponse();
+            $errorContent      = $exceptionResponse->json();
 
             throw new KickBoxApiException(
                 $errorContent['message'],
@@ -94,12 +98,12 @@ class Client
      */
     protected function getQueryParameters($email, $timeout = 6000)
     {
-        return array(
-            'query' => array(
+        return [
+            'query' => [
                 'email'   => $email,
                 'apikey'  => $this->key,
                 'timeout' => $timeout,
-            )
-        );
+            ]
+        ];
     }
 }

@@ -13,6 +13,8 @@ namespace Andi\KickBoxBundle\Http;
 
 /**
  * The response content of a Kickbox Request.
+ *
+ * @author Abdoul Ndiaye <abdoul.nd@gmail.com>
  */
 class Response
 {
@@ -45,7 +47,7 @@ class Response
     protected $reason;
 
     /**
-     * If the email address is a role address
+     * If the email address is a role address.
      *
      * @var boolean
      */
