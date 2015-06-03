@@ -136,4 +136,4 @@ A successful API call responds with the following object:
 ```
 
 
-All the Kickbox API is explained here : [Using api API](http://docs.kickbox.io/v2.0/docs/using-the-apical)
+All the Kickbox API is explained here : [Using api API](http://docs.kickbox.io/v2.0/docs/using-the-api)
