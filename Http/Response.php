@@ -47,7 +47,7 @@ class Response
     protected $reason;
 
     /**
-     * If the email address is a role address
+     * If the email address is a role address.
      *
      * @var boolean
      */
