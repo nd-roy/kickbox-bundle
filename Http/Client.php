@@ -11,6 +11,7 @@
 
 namespace Andi\KickBoxBundle\Http;
 
+use Andi\KickBoxBundle\Exception\EmptyContentException;
 use Andi\KickBoxBundle\Exception\KickBoxApiException;
 use Andi\KickBoxBundle\Factory\ResponseFactory;
 use GuzzleHttp\Client as HttpClient;
@@ -85,7 +86,13 @@ class Client
             );
         }
 
-        return $this->responseFactory->createResponse($httpResponse->getHeaders(), $httpResponse->json());
+        $parameters = $httpResponse->json();
+
+        if (empty($parameters)) {
+            throw new EmptyContentException();
+        }
+
+        return $this->responseFactory->createResponse($httpResponse->getHeaders(), $parameters);
     }
 
     /**
