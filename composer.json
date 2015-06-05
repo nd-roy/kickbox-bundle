@@ -1,10 +1,13 @@
 {
     "name": "andi/kickbox-bundle",
-    "description": "Free Email Verification for Symfony: http://kickbox.io",
+    "description": "Symfony Kickbox Bundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "homepage": "https://github.com/AbdoulNdiaye/kickbox-bundle",
-    "keywords": ["kickbox", "api"],
+    "keywords": [
+        "kickbox",
+        "api"
+    ],
     "authors": [
         {
             "name": "Abdoul Ndiaye",
@@ -12,15 +15,20 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": ">=5.3"
+        "guzzlehttp/guzzle": "~5.3"
     },
     "require-dev": {
-      "phpunit/phpunit": "~4.5",
-      "phake/phake": "~2.0"
+        "phpunit/phpunit": "~4.5",
+        "phake/phake": "~2.0"
     },
     "autoload": {
         "psr-4": {
             "Andi\\KickBoxBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
         }
     }
 }
