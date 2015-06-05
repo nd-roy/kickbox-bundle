@@ -20,10 +20,10 @@ build:
    environment:
         php:
             version: 5.5
-    tests:
-        override:
-            -
-                command: 'vendor/bin/phpunit --coverage-clover=coverage'
-                coverage:
-                    file: 'coverage'
-                    format: 'php-clover'
+   tests:
+       override:
+           -
+              command: 'vendor/bin/phpunit --coverage-clover=coverage'
+              coverage:
+                  file: 'coverage'
+                  format: 'php-clover'
