@@ -17,13 +17,13 @@ tools:
     external_code_coverage: true
 
 build:
-   environment:
+    tests:
+        override:
+            -
+                command: 'vendor/bin/phpunit --coverage-clover=coverage'
+                coverage:
+                    file: 'coverage'
+                    format: 'php-clover'
+    environment:
         php:
-            version: 5.5
-   tests:
-       override:
-           -
-              command: 'vendor/bin/phpunit --coverage-clover=coverage'
-              coverage:
-                  file: 'coverage'
-                  format: 'php-clover'
+            version: 5.5 
