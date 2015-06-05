@@ -12,6 +12,7 @@
 namespace Andi\KickBoxBundle\Tests\DependencyInjection;
 
 use Andi\KickBoxBundle\DependencyInjection\AndiKickBoxExtension;
+use Andi\KickBoxBundle\Factory\ResponseFactory;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
@@ -62,7 +63,7 @@ class AndiKickBoxExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Andi\KickBoxBundle\Http\Client', $container->getParameter('kickbox.http.client.class'));
         $this->assertEquals('GuzzleHttp\Client', $container->getParameter('kickbox.guzzle.client.class'));
         $this->assertEquals(
-            'Andi\KickBoxBundle\Factory\ResponseFactory',
+            ResponseFactory::class,
             $container->getParameter('kickbox.http.response.factory.class')
         );
     }

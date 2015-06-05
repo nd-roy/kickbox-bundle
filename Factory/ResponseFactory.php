@@ -34,8 +34,7 @@ class ResponseFactory
 
         $response
             ->setBalance($headers['X-Kickbox-Balance'][0])
-            ->setResponseTime($headers['X-Kickbox-Response-Time'][0])
-        ;
+            ->setResponseTime($headers['X-Kickbox-Response-Time'][0]);
 
         $response
             ->setResult($parameters['result'])
@@ -49,8 +48,7 @@ class ResponseFactory
             ->setEmail($parameters['email'])
             ->setUser($parameters['user'])
             ->setDomain($parameters['domain'])
-            ->setSuccess($parameters['success'])
-        ;
+            ->setSuccess($parameters['success']);
 
         return $response;
     }
