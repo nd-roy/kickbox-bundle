@@ -11,6 +11,7 @@
 
 namespace Andi\KickBoxBundle\Http;
 
+use Andi\KickBoxBundle\Exception\EmptyContentException;
 use Andi\KickBoxBundle\Exception\KickBoxApiException;
 use Andi\KickBoxBundle\Factory\ResponseFactory;
 use GuzzleHttp\Client as HttpClient;
@@ -63,8 +64,8 @@ class Client
     /**
      * Call the Api to validate one specific email address.
      *
-     * @param string $email    The email address to be verified
-     * @param int    $timeout  Maximum time, in milliseconds, for the API to complete a verification request.
+     * @param string $email   The email address to be verified
+     * @param int    $timeout Maximum time, in milliseconds, for the API to complete a verification request.
      *
      * @return Response     A Kickbox response instance.
      */
@@ -85,14 +86,20 @@ class Client
             );
         }
 
-        return $this->responseFactory->createResponse($httpResponse->getHeaders(), $httpResponse->json());
+        $parameters = $httpResponse->json();
+
+        if (empty($parameters)) {
+            throw new EmptyContentException();
+        }
+
+        return $this->responseFactory->createResponse($httpResponse->getHeaders(), $parameters);
     }
 
     /**
      * Return the query parameters for a kickbox api call.
      *
-     * @param string $email    The email address.
-     * @param int    $timeout  Time in milliseconds.
+     * @param string $email   The email address.
+     * @param int    $timeout Time in milliseconds.
      *
      * @return array The query parameters.
      */
