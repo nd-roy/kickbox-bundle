@@ -27,7 +27,7 @@ class ResponseFactoryTest extends \PHPUnit_Framework_TestCase
     /**
      * @var array
      */
-    protected $goodHeaders = [
+    public static $goodHeaders = [
         'X-Kickbox-Balance'       => [0 => 1],
         'X-Kickbox-Response-Time' => [0 => 5],
     ];
@@ -35,7 +35,7 @@ class ResponseFactoryTest extends \PHPUnit_Framework_TestCase
     /**
      * @var array
      */
-    protected $goodParameters = [
+    public static $goodParameters = [
         'domain'       => 2,
         'email'        => 3,
         'reason'       => 4,
@@ -66,7 +66,7 @@ class ResponseFactoryTest extends \PHPUnit_Framework_TestCase
     public function testFactoryWithGoodValue()
     {
         $factory  = new ResponseFactory();
-        $response = $factory->createResponse($this->goodHeaders, $this->goodParameters);
+        $response = $factory->createResponse(self::$goodHeaders, self::$goodParameters);
         $this->assertInstanceOf(Response::class, $response);
         $this->assertEquals(1, $response->getBalance());
         $this->assertEquals(2, $response->getDomain());
@@ -93,7 +93,7 @@ class ResponseFactoryTest extends \PHPUnit_Framework_TestCase
     {
         return [
             [
-                $this->goodHeaders,
+                self::$goodHeaders,
                 [
                     'bad value' => '',
                 ],
@@ -103,7 +103,7 @@ class ResponseFactoryTest extends \PHPUnit_Framework_TestCase
                     'X--Balance'       => [0 => ''],
                     'X--Response-Time' => [0 => ''],
                 ],
-                $this->goodParameters,
+                self::$goodParameters,
             ]
         ];
     }
