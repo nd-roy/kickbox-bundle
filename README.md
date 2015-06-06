@@ -8,9 +8,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/?branch=master)
 [![Build Status](https://travis-ci.org/AbdoulNdiaye/kickbox-bundle.svg?branch=master)](https://travis-ci.org/AbdoulNdiaye/kickbox-bundle)
-
-[![Latest Stable Version](https://poser.pugx.org/andi/kickbox-bundle/v/stable)](https://packagist.org/packages/andi/kickbox-bundle) 
-[![Latest Unstable Version](https://poser.pugx.org/andi/kickbox-bundle/v/unstable)](https://packagist.org/packages/andi/kickbox-bundle) 
 [![License](https://poser.pugx.org/andi/kickbox-bundle/license)](https://packagist.org/packages/andi/kickbox-bundle)
 
 
