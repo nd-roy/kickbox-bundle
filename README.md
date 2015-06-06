@@ -34,18 +34,8 @@ Make sure you have [composer](https://getcomposer.org) installed.
 
 Add the following to your composer.json
 
-```json
-{
-    "require": {
-        "andi/kickbox": "*"
-    }
-}
-```
-
-Update your dependencies
-
 ```bash
-$ php composer.phar update
+$ php composer.phar require andi/kickbox-bundle
 ```
 
 > This package follows the `PSR-4` convention names for its classes, which means you can easily integrate these classes loading in your own autoloader.
