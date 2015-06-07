@@ -8,8 +8,10 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/AbdoulNdiaye/kickbox-bundle/?branch=master)
 [![Build Status](https://travis-ci.org/AbdoulNdiaye/kickbox-bundle.svg?branch=master)](https://travis-ci.org/AbdoulNdiaye/kickbox-bundle)
-[![License](https://poser.pugx.org/andi/kickbox-bundle/license)](https://packagist.org/packages/andi/kickbox-bundle)
 
+[![Latest Stable Version](https://poser.pugx.org/andi/kickbox-bundle/v/stable)](https://packagist.org/packages/andi/kickbox-bundle) 
+[![Latest Unstable Version](https://poser.pugx.org/andi/kickbox-bundle/v/unstable)](https://packagist.org/packages/andi/kickbox-bundle) 
+[![License](https://poser.pugx.org/andi/kickbox-bundle/license)](https://packagist.org/packages/andi/kickbox-bundle)
 
 [![Join the chat at https://gitter.im/AbdoulNdiaye/kickbox-bundle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AbdoulNdiaye/kickbox-bundle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
