@@ -12,8 +12,8 @@
 namespace Andi\KickBoxBundle\Tests\Exception;
 
 use Andi\KickBoxBundle\Exception\KickBoxApiException;
-use GuzzleHttp\Message\Request;
-use GuzzleHttp\Message\Response;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 
 /**
  * Class KickBoxApiExceptionTest

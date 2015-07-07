@@ -12,8 +12,8 @@
 namespace Andi\KickBoxBundle\Exception;
 
 use GuzzleHttp\Exception\BadResponseException;
-use GuzzleHttp\Message\RequestInterface;
-use GuzzleHttp\Message\ResponseInterface;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Exception thrown if a kickbox api call has not a 2xx http status code.

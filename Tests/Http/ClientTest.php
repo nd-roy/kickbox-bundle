@@ -17,9 +17,9 @@ use Andi\KickBoxBundle\Factory\ResponseFactory;
 use Andi\KickBoxBundle\Http\Client;
 use Andi\KickBoxBundle\Http\Response;
 use Andi\KickBoxBundle\Tests\Factory\ResponseFactoryTest;
-use GuzzleHttp\Message\Request;
-use GuzzleHttp\Message\Response as HttpResponse;
-use GuzzleHttp\Stream\Stream;
+use GuzzleHttp\Psr7\Response as HttpResponse;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Stream;
 use Phake;
 use GuzzleHttp\Client as HttpClient;
 
@@ -104,7 +104,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         return new HttpResponse(
             200,
             ResponseFactoryTest::$goodHeaders,
-            Stream::factory(json_encode(ResponseFactoryTest::$goodParameters))
+            json_encode(ResponseFactoryTest::$goodParameters)
         );
     }
 
@@ -116,7 +116,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         return new HttpResponse(
             500,
             [],
-            Stream::factory(json_encode(['message' => 'exception message']))
+            json_encode(['message' => 'exception message'])
         );
     }
 }

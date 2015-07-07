@@ -16,7 +16,7 @@ use Andi\KickBoxBundle\Exception\KickBoxApiException;
 use Andi\KickBoxBundle\Factory\ResponseFactory;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Message\ResponseInterface;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * The Kickbox http client that verify email addresses.
@@ -76,7 +76,7 @@ class Client
         } catch (RequestException $exception) {
             /* @var ResponseInterface $exceptionResponse */
             $exceptionResponse = $exception->getResponse();
-            $errorContent      = $exceptionResponse->json();
+            $errorContent      = json_decode($exceptionResponse->getBody(), true);
 
             throw new KickBoxApiException(
                 $errorContent['message'],
@@ -86,7 +86,7 @@ class Client
             );
         }
 
-        $parameters = $httpResponse->json();
+        $parameters = json_decode($httpResponse->getBody(), true);
 
         if (empty($parameters)) {
             throw new EmptyContentException();
