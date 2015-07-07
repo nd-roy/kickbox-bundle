@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "~5.3",
+        "guzzlehttp/guzzle": "~6.0",
         "symfony/framework-bundle": "~2.3"
     },
     "require-dev": {

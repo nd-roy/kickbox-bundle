@@ -82,7 +82,8 @@ class ResponseFactory
             ->setEmail($parameters['email'])
             ->setUser($parameters['user'])
             ->setDomain($parameters['domain'])
-            ->setSuccess($parameters['success']);
+            ->setSuccess($parameters['success'])
+        ;
 
         return $response;
     }
