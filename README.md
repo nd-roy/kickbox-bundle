@@ -17,6 +17,8 @@
 
 # Email Verification Library for Symfony
 
+[![Join the chat at https://gitter.im/AbdoulNdiaye/kickbox-bundle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AbdoulNdiaye/kickbox-bundle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Kickbox determines if an email address is not only valid, but associated with a actual user. Uses include:
 
 * Preventing users from creating accounts on your applications using fake, misspelled, or throw-away email addresses.
